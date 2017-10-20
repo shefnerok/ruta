@@ -1,0 +1,46 @@
+PACKAGE com.omilia.test;
+
+SCRIPT com.omilia.test.core;
+
+Document{ -> CALL(core)};
+//Apply_for_Card
+DECLARE Card_Application;
+(Card # Application){ -> CREATE (Card_Application)};
+(Application # Card){ -> CREATE (Card_Application)};
+//Apply_for_Card-Personal
+DECLARE Personal_Card_Application;
+(Application # Personal # Card){ -> CREATE (Personal_Card_Application)};
+//Apply_for_Card-Business
+DECLARE Business_Card_Application;
+(Application # Business # Card){ -> CREATE (Business_Card_Application)};
+//Balance-Balance_Transfer
+DECLARE Balance_Transfer;
+(Balance_Inquiry # Transfer){ -> CREATE (Balance_Transfer)};
+(Transfer # Balance_Inquiry){ -> CREATE (Balance_Transfer)};
+//Activate_Card
+DECLARE Card_Activation;
+(Card # Activation){ -> CREATE (Card_Activation)};
+(Activation # Card){ -> CREATE (Card_Activation)};
+//Cancel_Card
+DECLARE Cancel_Card;
+(Cancel # Card){ -> CREATE (Cancel_Card)};
+(Card # Cancel){ -> CREATE (Cancel_Card)};
+(Relative # Accident){ -> CREATE (Cancel_Card)};
+(Accident # Relative){ -> CREATE (Cancel_Card)};
+//Credit_Limit_Inquiry
+DECLARE Credit_Limit_Inquiry;
+(Limit # Credit){ -> CREATE (Credit_Limit_Inquiry)};
+(Credit # Limit){ -> CREATE (Credit_Limit_Inquiry)};
+//Credit_Limit-Change_Limit
+DECLARE Credit_Limit_Change;
+(Change # Credit # Limit){ -> CREATE (Credit_Limit_Change)};
+(Credit # Limit # Change){ -> CREATE (Credit_Limit_Change)};
+(Change # Limit){ -> CREATE (Credit_Limit_Change)};
+//Payment - Minimum Payment
+DECLARE Minimum_Payment;
+(Minimum # Payment){ -> CREATE (Minimum_Payment)};
+
+
+
+
+

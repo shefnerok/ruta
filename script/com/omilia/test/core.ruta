@@ -1,0 +1,46 @@
+PACKAGE com.omilia.test;
+
+DECLARE Card;
+"card|Card|CreditCard|credit card" -> Card;
+DECLARE Application;
+"apply|application|open|Open" -> Application;
+DECLARE Activation;
+"activate|activation" -> Activation;
+DECLARE Personal;
+"personal|Personal" -> Personal;
+DECLARE Business;
+"business|Business" -> Business;
+//Balance Inquiry
+DECLARE Balance_Inquiry;
+"how much|How much|Balance|balance" -> Balance_Inquiry;
+DECLARE Transfer;
+"transfer|Transfer" -> Transfer;
+DECLARE Cancel;
+"cancel|Cancel|close|Close|terminate|Terminate" -> Cancel;
+
+DECLARE Relative;
+"relative|Relative" -> Relative;
+DECLARE Accident;
+"passed away|died|accident" -> Accident;
+
+DECLARE Credit;
+"credit|Credit|balance|Balance|Account|account" -> Credit;
+DECLARE Available;
+"available|Available|remaining|Remaining|Credit left|credit left|how much|How much" -> Available;
+DECLARE Limit;
+"limit|Limit|limits|Limits|spending limit|spend limit|line" -> Limit;
+DECLARE Change;
+"increase|Increase|decrease|Decrease|change|Change" -> Change;
+//Payment
+DECLARE Payment;
+"Payment|payment|Pay|pay|" -> Payment;
+DECLARE Minimum;
+"minimum|Minimum" -> Minimum;
+//PIN Issues
+DECLARE Pin_Issues;
+"pin|Pin|PIN" -> Pin_Issues;
+
+
+
+
+
